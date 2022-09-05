@@ -74,9 +74,11 @@ function addPagination(list) {
   })
 
 }
-showPage(data, 1); 
-addPagination(data)
+
 
   // give the first pagination button a class of "active"
  
    // Call functions
+
+   showPage(data, 1); 
+addPagination(data)
