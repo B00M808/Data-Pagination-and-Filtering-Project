@@ -18,13 +18,13 @@ Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
 //Defined function to display a page of 9 students
-let studentList = document.querySelector(".student-list");
+const studentList = document.querySelector(".student-list");
 
 function showPage(list, page) {
    console.log(list);
     
-   let startIndex = (page * 9) - 9; //(page parameter * items per page) - items per page
-   let endIndex = page * 9; // page parameter * items per page
+   const startIndex = (page * 9) - 9; //(page parameter * items per page) - items per page
+   const endIndex = page * 9; // page parameter * items per page
 
    // set the innerHTML property of the variable you just created to an empty string
    studentList.innerHTML = "";
@@ -55,14 +55,14 @@ This function will create and insert/append the elements needed for the paginati
 
 function addPagination(list) {
   // created a variable to calculate the number of pages needed
-  let numOfPages = list.length / 9;
+  const numOfPages = list.length / 9;
   // selected the element with a class of `link-list` and assigned it to a variable
-  let linkList = document.querySelector(".link-list");
+  const linkList = document.querySelector(".link-list");
 
   // set the innerHTML property of the variable you just created to an empty string
   linkList.innerHTML = "";
 
-  // looped over the number of pages needed
+  // looped over the number of pages 
   for(let i = 0; i < numOfPages; i++){
     // created the elements needed to display the pagination button
     linkList.insertAdjacentHTML('beforeend', `
